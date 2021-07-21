@@ -1,0 +1,24 @@
+common mongodb commands
+
+Install Docker, Mongodb, on EC2
+
+yum install docker -y
+
+
+https://dzone.com/articles/8-simple-steps-to-install-mongodb-with-authenticat-1
+
+mongo localhost:27017/admin -u admin -p admin
+
+use admin
+db.createUser(
+  {
+    user: 'admin',
+    pwd: 'password',
+    roles: [ { role: 'root', db: 'admin' } ]
+  }
+);
+exit;
+
+db.grantRolesToUser('admin', [{ role: 'root', db: 'admin' }])
+
+show dbs;
