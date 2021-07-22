@@ -9,6 +9,8 @@ https://dzone.com/articles/8-simple-steps-to-install-mongodb-with-authenticat-1
 
 mongo localhost:27017/admin -u admin -p admin
 
+db.help
+
 use admin
 db.createUser(
   {
